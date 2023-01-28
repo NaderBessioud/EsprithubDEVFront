@@ -1,0 +1,99 @@
+
+<br />
+<br />
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Show BI Report</button>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <div class="card text-white bg-info">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="icon-people"></i>
+        </div>
+        <div class="h4 mb-0">{{userCount}}</div>
+        <h4 class="text-muted text-uppercase font-weight-bold"
+        >Total  Users</h4
+        >
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="card text-white bg-success">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="icon-user-follow"></i>
+        </div>
+        <div class="h4 mb-0">{{userCountbyDay}}</div>
+        <h4 class="text-muted text-uppercase font-weight-bold"
+        >Today  new Users</h4>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="card text-white bg-info">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="cil-code"></i>
+        </div>
+        <div class="h4 mb-0">{{questions}}</div>
+                <h4 class="text-muted text-uppercase font-weight-bold">Today  Questions </h4>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="card text-white bg-info">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="cil-lightbulb"></i>
+        </div>
+        <div class="h4 mb-0">{{options}}</div>
+        <h4 class="text-muted text-uppercase font-weight-bold">Total options </h4>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<br />
+<div class="row">
+  <div class="col-sm-6 col-md-6">
+
+    <div style="display: block; " >
+      <h3 style="text-align: center;">Users per role</h3>
+
+      <canvas baseChart
+
+              [title]="legend"
+              [data]=[users,Teachers]
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+
+
+
+</div >
+<br>
+<br>
+<div style="display: block; width: 95%;" >
+  <canvas id="canvas">{{ chart }}</canvas>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <iframe title="bitest" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=d3f17e9a-3ce6-4b18-aa04-37e606cdf3e7&autoAuth=true&ctid=513486ec-6643-4f17-a508-76478311be42" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+  </div>
+</div>
+
+
+
+
+

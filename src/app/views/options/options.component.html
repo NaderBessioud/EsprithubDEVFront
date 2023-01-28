@@ -1,0 +1,35 @@
+<br>
+<h2 style="text-align: center;">All options</h2>
+<br>
+<br>
+<div  class="options-card">
+  <div *ngFor="let o of options">
+    <div class="card  mb-3 single-option" style="max-width: 18rem;">
+      <div class="card-header">{{o.libelle}}</div>
+      <div class="card-body ">
+        <h5 class="card-title">{{o.discription}}</h5>
+      </div>
+      <div class="card-footer">
+        <a  class="btn btn-outline-danger action-btn" data-toggle="modal" (click)="dangerModal.show()"  ><i class="icon-trash"></i></a>
+      </div>
+      <!--Modal begin-->
+      <div bsModal #dangerModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-danger" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Delete option</h4>
+              <button type="button" class="close" (click)="dangerModal.hide()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to delete this option ? &hellip;</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="dangerModal.hide()">Close</button>
+              <button type="button" class="btn btn-danger" (click)="delete(o.idOption)" (click)="dangerModal.hide()" >Delete  option</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal end -->
+    </div>

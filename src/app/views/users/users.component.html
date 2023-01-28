@@ -1,0 +1,77 @@
+<br>
+<br>
+
+<div class="container-fluid">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="title"> Users Info</h3>
+      </div>
+      <div class="card-body">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="search for a user" [(ngModel)]="searchtext" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2"><i class="icon-magnifier
+            "></i></span>
+          </div>
+        </div>
+
+        <table class="table table-bordered">
+
+          <thead>
+          <tr>
+            <th scope="col">First name</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Email</th>
+            <th>role</th>
+            <th>status</th>
+            <th scope="col">more Details</th>
+            <th scope="col">delete</th>
+
+          </tr>
+          </thead>
+
+          <tbody *ngFor="let u of listUser |filter:searchtext" >
+          <tr>
+            <td>{{u.firstName}}</td>
+            <td>{{u.lastName}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.role}}</td>
+            <td >
+              <span *ngIf="u.enabled === true" class="badge badge-success">allowable</span>
+              <span *ngIf="u.enabled === false" class="badge badge-danger">blocked</span>
+            </td>
+
+            <th><a  class="btn btn-primary action-btn" (click)="detail(u.id)" ><i class="icon-eye"></i></a></th>
+            <th><a  class="btn btn-warning action-btn" data-toggle="modal" (click)="warningModal.show()" ><i class="icon-trash"></i></a></th>
+            <!--Modal begin-->
+            <div bsModal #warningModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-warning" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Delete user</h4>
+                    <button type="button" class="close" (click)="warningModal.hide()" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Are you sure you want to delete the user ? &hellip;</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="warningModal.hide()">Close</button>
+                    <button type="button" class="btn btn-warning" (click)="delete(u.id)" (click)="warningModal.hide()" >Delete  user</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal end -->
+
+
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
