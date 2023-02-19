@@ -2,5 +2,5 @@
 [Server]
 192.168.1.21
 [Server:vars]
-ansible_python_interpreter = /usr/bin/python3
+ansible_python_interpreter = /usr/bin/python
 ansi_user= linux2
