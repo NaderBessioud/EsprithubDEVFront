@@ -2,17 +2,17 @@
 # tasks file for docker
 - name: create image docker
   docker_image:
-    name: walidbelhadj/devops
+    name: naderbessioud/esprithubangular
     build:
-      path: /var/lib/jenkins/workspace/validation
+      path: /var/lib/jenkins/workspace/EsprithubAngular
       pull: no
     source: build
     state: present
     force_source: true
 - name: run container docker 
   docker_container:
-    name: myapp_container
-    image: walidbelhadj/devops:latest
+    name: esprithubangular
+    image: naderbessioud/esprithubangular:latest
     state: started
     recreate: true
     ports:
