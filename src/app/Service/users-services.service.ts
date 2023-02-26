@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsersServicesService {
-  url : string = 'http://localhost:8082/EspritHub/user';
+  url : string = 'http://192.168.107.228:8082/EspritHub/user';
   fd:FormData;
   constructor(private http: HttpClient) { }
   getUsers()
