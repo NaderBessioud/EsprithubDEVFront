@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class UeServiceService {
-  url : string = 'http://127.0.0.1:8082/EspritHub/';
+  url : string = 'http://192.168.107.228:8082/EspritHub/';
 
   constructor(private http:HttpClient) { }
 
