@@ -5,7 +5,7 @@ import {lienUtile} from '../Entities/lienUtile'
   providedIn: 'root'
 })
 export class LienUtileService {
-  url : string = 'http://127.0.0.1:8082/EspritHub/';
+  url : string = 'http://192.168.107.228:8082/EspritHub/';
 
   constructor(private http:HttpClient) { }
 
