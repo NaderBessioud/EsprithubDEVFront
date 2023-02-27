@@ -10,7 +10,7 @@ import {resolveFileWithPostfixes} from "@angular/compiler-cli/ngcc/src/utils";
   providedIn: 'root'
 })
 export class AuthService {
-  url : string = 'http://192.168.107.228:8082/EspritHub/';
+  url : string = 'http://192.168.4.228:8082/EspritHub/';
   helper = new JwtHelperService();
   decodedToken: any;
   tokenCheck:any;
