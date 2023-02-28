@@ -1,5 +1,5 @@
 ---
- - hosts: 192.168.4.228
+ - hosts: 192.168.2.176
    gather_facts: true
    become: true
    
