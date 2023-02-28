@@ -11,8 +11,8 @@ import {User} from "../Entities/user";
   providedIn: 'root'
 })
 export class QuestionServiceService {
-  url : string = 'http://192.168.4.228:8082/EspritHub/';
-  url2 : string = 'http://192.168.4.228:5000/api';
+  url : string = 'http://192.168.2.176:8082/EspritHub/';
+  url2 : string = 'http://192.168.2.176:5000/api';
 
   constructor(private http: HttpClient) { }
 
