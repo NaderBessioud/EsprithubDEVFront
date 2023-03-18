@@ -7,7 +7,7 @@ import { Option } from '../Entities/options';
   providedIn: 'root'
 })
 export class OptionsService {
-  url : string = 'http://192.168.2.176:8082/EspritHub/options/';
+  url : string = 'http://192.168.1.20:8082/EspritHub/options/';
   option: Option
   constructor(private http: HttpClient) { }
 
