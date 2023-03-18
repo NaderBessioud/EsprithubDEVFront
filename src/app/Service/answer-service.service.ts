@@ -9,7 +9,7 @@ import {UserQuestion} from "../Entities/user-question";
 })
 export class AnswerServiceService {
 
-  url : string = 'http://192.168.2.176:8082/EspritHub/';
+  url : string = 'http://192.168.1.20:8082/EspritHub/';
 
   constructor(private http: HttpClient) { }
 
