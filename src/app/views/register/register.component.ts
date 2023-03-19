@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit{
   save(){
     this.register.SaveUser(this.user).subscribe();
     this.router.navigate(["/login"]);
-    this.toastr.success("Please check your email to complete your registration");
+    this.toastr.success("Please check your email to complete your registration cccccc");
 
   }
 
