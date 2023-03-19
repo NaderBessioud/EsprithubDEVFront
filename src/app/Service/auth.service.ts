@@ -29,6 +29,7 @@ export class AuthService {
   }
 
   SaveUser(u:User){
+    console.log(this.url);
     return this.http.post(this.url+"registration",u,{responseType: 'text'});
   }
 
