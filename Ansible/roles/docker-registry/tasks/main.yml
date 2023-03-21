@@ -6,5 +6,5 @@
     password: infinidocker
     
 - name: Push the Docker image into the repo
-  shell: docker push naderbessioud/esprithubangular1:latest
+  shell: docker push naderbessioud/esprithubangular:latest
       
