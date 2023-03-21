@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit{
     this.user = new User();
   }
   ngOnInit() :void {
-    console.log(this.user);
+    console.log("cbn");
   }
   save(){
     this.register.SaveUser(this.user).subscribe();
