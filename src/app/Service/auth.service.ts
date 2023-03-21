@@ -30,7 +30,7 @@ export class AuthService {
 
   SaveUser(u:User){
     console.log(this.url);
-    return this.http.post("http://192.168.1.20:8082/EspritHub/"+"registration",u,{responseType: 'text'});
+    return this.http.post(this.url+"registration",u,{responseType: 'text'});
   }
 
 
