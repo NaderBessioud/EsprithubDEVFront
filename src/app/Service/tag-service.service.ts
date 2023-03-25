@@ -8,7 +8,7 @@ import {UserQuestion} from "../Entities/user-question";
   providedIn: 'root'
 })
 export class TagServiceService {
-  url : string = 'http://192.168.1.21:8082/EspritHub/';
+  url : string = 'http://192.168.1.17:8082/EspritHub/';
 
   constructor(private http: HttpClient) { }
 
