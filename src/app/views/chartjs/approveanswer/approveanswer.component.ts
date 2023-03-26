@@ -28,7 +28,8 @@ export class ApproveanswerComponent implements OnInit {
 
   ngOnInit(): void{
   this.userService.getinformations().subscribe(user=>{
-    if(user.role="user"){
+    console.log(user.role)
+    if(user.role =="user"){
       this.service.getStudentQuestion().subscribe(data=>{
         this.userquestions=data;
         console.log(data[0]);
